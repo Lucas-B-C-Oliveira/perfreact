@@ -1,5 +1,12 @@
 import { ProductItem } from "./ProductItem"
-import { List, ListRowRenderer } from 'react-virtualized'
+import { FC } from "react";
+import {
+  List as _List,
+  ListProps,
+  ListRowRenderer,
+} from "react-virtualized";
+
+const List = _List as unknown as FC<ListProps>;
 
 interface SearchResultsProps {
   totalPrice: number
